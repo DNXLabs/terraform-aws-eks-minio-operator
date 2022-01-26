@@ -24,26 +24,15 @@ module "minio_operator" {
 |------|---------|
 | terraform | >= 0.13 |
 | aws | >= 3.13, < 4.0 |
-| helm | >= 1.0, < 3.0 |
+| helm | >= 1.2, < 3.0 |
 | kubernetes | >= 1.10.0, < 3.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| helm | 2.4.1 |
-| kubernetes | 2.7.1 |
-
-## Modules
-
-No modules.
-
-## Resources
-
-| Name | Type |
-|------|------|
-| [helm_release.minio_operator](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
-| [kubernetes_namespace.minio_operator](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace) | resource |
+| helm | >= 1.2, < 3.0 |
+| kubernetes | >= 1.10.0, < 3.0.0 |
 
 ## Inputs
 
@@ -61,7 +50,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+No output.
 
 <!--- END_TF_DOCS --->
 
