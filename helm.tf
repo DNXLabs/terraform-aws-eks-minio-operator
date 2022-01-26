@@ -6,7 +6,7 @@ resource "helm_release" "minio_operator" {
   repository       = var.helm_chart_repo
   version          = var.helm_chart_version
   namespace        = var.namespace
-  create_namespace = var.create_namespace
+  create_namespace = true
 
   values = [
     yamlencode(var.settings)
