@@ -1,11 +1,12 @@
 resource "helm_release" "minio_operator" {
-  depends_on = [var.mod_dependency, kubernetes_namespace.minio_operator]
-  count      = var.enabled ? 1 : 0
-  name       = var.helm_chart_name
-  chart      = var.helm_chart_release_name
-  repository = var.helm_chart_repo
-  version    = var.helm_chart_version
-  namespace  = var.namespace
+  depends_on       = [var.mod_dependency, kubernetes_namespace.minio_operator]
+  count            = var.enabled ? 1 : 0
+  name             = var.helm_chart_name
+  chart            = var.helm_chart_release_name
+  repository       = var.helm_chart_repo
+  version          = var.helm_chart_version
+  namespace        = var.namespace
+  create_namespace = var.create_namespace
 
   values = [
     yamlencode(var.settings)
