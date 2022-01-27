@@ -12,13 +12,13 @@ variable "helm_chart_name" {
 
 variable "helm_chart_release_name" {
   type        = string
-  default     = "minio-operator"
+  default     = "minio/operator"
   description = "Helm release name"
 }
 
 variable "helm_chart_version" {
   type        = string
-  default     = "4.4.3"
+  default     = "4.4.4"
   description = "MinIO operator Helm chart version."
 }
 
