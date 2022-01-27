@@ -41,9 +41,9 @@ module "minio_operator" {
 | create\_namespace | Whether to create Kubernetes namespace with name defined by `namespace`. | `bool` | `true` | no |
 | enabled | Variable indicating whether deployment is enabled. | `bool` | `true` | no |
 | helm\_chart\_name | MinIO operator Helm chart name to be installed | `string` | `"minio-operator"` | no |
-| helm\_chart\_release\_name | Helm release name | `string` | `"minio-operator"` | no |
+| helm\_chart\_release\_name | Helm release name | `string` | `"minio/operator"` | no |
 | helm\_chart\_repo | MinIO operator repository name. | `string` | `"https://operator.min.io/"` | no |
-| helm\_chart\_version | MinIO operator Helm chart version. | `string` | `"4.4.3"` | no |
+| helm\_chart\_version | MinIO operator Helm chart version. | `string` | `"4.4.4"` | no |
 | mod\_dependency | Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable. | `any` | `null` | no |
 | namespace | Kubernetes namespace to deploy MinIO operator Helm chart. | `string` | `"minio-operator"` | no |
 | settings | Additional settings which will be passed to the Helm chart values. | `map` | `{}` | no |
